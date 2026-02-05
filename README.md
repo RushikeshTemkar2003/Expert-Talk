@@ -229,24 +229,6 @@ CORS is configured for `http://localhost:3000`. Update `SecurityConfig.java` if 
 - Advanced search and filtering
 - Mobile app support
 
-## 📄 License
-
-This project is licensed under the MIT License.
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'Add AmazingFeature'`)
-4. Push to branch (`git push origin feature/AmazingFeature`)
-5. Open Pull Request
-
-## 📞 Support
-
-For support and questions:
-- Create an issue in the repository
-- Email: support@experttalk.com (placeholder)
-
 ---
 
 **Happy Coding! 🎉**
