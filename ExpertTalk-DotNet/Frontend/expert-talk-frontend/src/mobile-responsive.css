@@ -1,0 +1,382 @@
+/* Mobile Responsiveness Enhancements for ExpertTalk Platform */
+
+/* Base responsive utilities */
+@media (max-width: 640px) {
+  /* Container adjustments */
+  .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  /* Typography scaling */
+  .text-6xl { font-size: 2.5rem !important; line-height: 1.1 !important; }
+  .text-5xl { font-size: 2rem !important; line-height: 1.1 !important; }
+  .text-4xl { font-size: 1.75rem !important; line-height: 1.2 !important; }
+  .text-3xl { font-size: 1.5rem !important; line-height: 1.2 !important; }
+  .text-2xl { font-size: 1.25rem !important; line-height: 1.3 !important; }
+  .text-xl { font-size: 1.125rem !important; line-height: 1.4 !important; }
+
+  /* Button adjustments */
+  .btn-primary, .btn-secondary {
+    padding: 0.75rem 1rem !important;
+    font-size: 0.875rem !important;
+  }
+
+  /* Form elements */
+  input, textarea, select {
+    font-size: 16px !important; /* Prevents zoom on iOS */
+    padding: 0.75rem !important;
+  }
+
+  /* Modal adjustments */
+  .modal-content {
+    margin: 1rem !important;
+    max-height: 90vh !important;
+    overflow-y: auto !important;
+  }
+
+  /* Card spacing */
+  .card {
+    margin-bottom: 1rem !important;
+    padding: 1rem !important;
+  }
+
+  /* Grid adjustments */
+  .grid-cols-2 {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+  
+  .grid-cols-3 {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+
+  /* Flex adjustments */
+  .flex-row {
+    flex-direction: column !important;
+  }
+
+  /* Spacing adjustments */
+  .space-x-4 > * + * {
+    margin-left: 0 !important;
+    margin-top: 0.5rem !important;
+  }
+
+  .space-x-6 > * + * {
+    margin-left: 0 !important;
+    margin-top: 0.75rem !important;
+  }
+
+  /* Header adjustments */
+  .header-mobile {
+    height: 3.5rem !important;
+  }
+
+  /* Navigation adjustments */
+  .nav-mobile {
+    padding: 0.5rem !important;
+  }
+
+  /* Chat interface adjustments */
+  .chat-header {
+    padding: 0.75rem !important;
+  }
+
+  .chat-message {
+    max-width: 85% !important;
+    font-size: 0.875rem !important;
+  }
+
+  .chat-input {
+    padding: 0.5rem !important;
+  }
+
+  /* Dashboard adjustments */
+  .dashboard-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 0.75rem !important;
+  }
+
+  .dashboard-card {
+    padding: 0.75rem !important;
+  }
+
+  /* Table adjustments */
+  .table-responsive {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .table-mobile {
+    min-width: 600px !important;
+  }
+
+  /* Tab navigation */
+  .tab-nav {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+  }
+
+  .tab-nav::-webkit-scrollbar {
+    display: none !important;
+  }
+
+  /* Payment modal adjustments */
+  .payment-modal {
+    margin: 0.5rem !important;
+    max-height: 95vh !important;
+  }
+
+  .payment-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 0.5rem !important;
+  }
+
+  /* Expert card adjustments */
+  .expert-card {
+    padding: 1rem !important;
+  }
+
+  .expert-avatar {
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+
+  /* Category card adjustments */
+  .category-card {
+    padding: 1rem !important;
+    text-align: center !important;
+  }
+
+  /* Session info adjustments */
+  .session-info {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  /* Admin panel adjustments */
+  .admin-tabs {
+    flex-wrap: wrap !important;
+    gap: 0.25rem !important;
+  }
+
+  .admin-tab {
+    font-size: 0.75rem !important;
+    padding: 0.5rem 0.75rem !important;
+  }
+
+  /* Form grid adjustments */
+  .form-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+
+  /* Status indicators */
+  .status-indicator {
+    font-size: 0.75rem !important;
+  }
+
+  /* Action buttons */
+  .action-buttons {
+    flex-direction: column !important;
+    gap: 0.5rem !important;
+  }
+
+  .action-button {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .container {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+
+  .grid-cols-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .grid-cols-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .text-6xl { font-size: 3rem !important; }
+  .text-5xl { font-size: 2.5rem !important; }
+  .text-4xl { font-size: 2rem !important; }
+}
+
+/* Touch-friendly interactions */
+@media (hover: none) and (pointer: coarse) {
+  .hover\:scale-105:hover {
+    transform: scale(1.02) !important;
+  }
+
+  .hover\:shadow-lg:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+  }
+
+  button, .btn, .clickable {
+    min-height: 44px !important;
+    min-width: 44px !important;
+  }
+}
+
+/* Landscape phone adjustments */
+@media (max-width: 896px) and (orientation: landscape) {
+  .chat-container {
+    height: 100vh !important;
+  }
+
+  .modal-content {
+    max-height: 85vh !important;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .icon, .avatar {
+    image-rendering: -webkit-optimize-contrast !important;
+    image-rendering: crisp-edges !important;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Dark mode support for mobile */
+@media (prefers-color-scheme: dark) {
+  .mobile-dark {
+    background-color: #1a202c !important;
+    color: #e2e8f0 !important;
+  }
+
+  .mobile-dark .bg-white {
+    background-color: #2d3748 !important;
+  }
+
+  .mobile-dark .text-gray-900 {
+    color: #e2e8f0 !important;
+  }
+
+  .mobile-dark .border-gray-200 {
+    border-color: #4a5568 !important;
+  }
+}
+
+/* Safe area adjustments for notched devices */
+@supports (padding: max(0px)) {
+  .safe-area-top {
+    padding-top: max(1rem, env(safe-area-inset-top)) !important;
+  }
+
+  .safe-area-bottom {
+    padding-bottom: max(1rem, env(safe-area-inset-bottom)) !important;
+  }
+
+  .safe-area-left {
+    padding-left: max(1rem, env(safe-area-inset-left)) !important;
+  }
+
+  .safe-area-right {
+    padding-right: max(1rem, env(safe-area-inset-right)) !important;
+  }
+}
+
+/* Utility classes for mobile-specific styling */
+.mobile-only {
+  display: none !important;
+}
+
+.desktop-only {
+  display: block !important;
+}
+
+@media (max-width: 640px) {
+  .mobile-only {
+    display: block !important;
+  }
+
+  .desktop-only {
+    display: none !important;
+  }
+
+  .mobile-flex {
+    display: flex !important;
+  }
+
+  .mobile-grid {
+    display: grid !important;
+  }
+
+  .mobile-hidden {
+    display: none !important;
+  }
+
+  .mobile-full-width {
+    width: 100% !important;
+  }
+
+  .mobile-text-center {
+    text-align: center !important;
+  }
+
+  .mobile-text-left {
+    text-align: left !important;
+  }
+
+  .mobile-p-4 {
+    padding: 1rem !important;
+  }
+
+  .mobile-m-2 {
+    margin: 0.5rem !important;
+  }
+
+  .mobile-mt-4 {
+    margin-top: 1rem !important;
+  }
+
+  .mobile-mb-4 {
+    margin-bottom: 1rem !important;
+  }
+}
+
+/* Performance optimizations for mobile */
+@media (max-width: 640px) {
+  * {
+    -webkit-tap-highlight-color: transparent !important;
+  }
+
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  .lazy-load {
+    loading: lazy !important;
+  }
+}
+
+/* Print styles for mobile */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .print-full-width {
+    width: 100% !important;
+  }
+
+  .print-break-after {
+    page-break-after: always !important;
+  }
+}

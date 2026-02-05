@@ -1,0 +1,6 @@
+@ExpertTalkAPI_HostAddress = http://localhost:5045
+
+GET {{ExpertTalkAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
